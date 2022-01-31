@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Win win Car's</title>
+    <meta name="description" content="Rent cars online" />
+    <meta name="keywords" content="cars, rent, online" />
+    <meta name="author" content="Faiza Rabhi" />
+    <!-- Main Template Css File -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Style Index -->
+<link rel="stylesheet" href="reservation.css">
+    <!-- Render All Elemnts Normally -->
+<link rel="stylesheet" href="css/normalize.css">
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="css/all.min.css">
+     <!-- Google Fonts -->
+     <link rel="preconnect" href="https://fonts.gstatic.com" />
+     <link
+       href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&#038;display=swap"
+       rel="stylesheet"
+     />
+
+</head>
+<body>
+
+<!-- Start Header -->
+<header>
+    <div class="container">
+        <a href="#" class="logo">
+            <img src="images/logo.svg" alt="logo" >
+
+        </a>
+        <nav>
+            <i class="fas fa-bars toggle-menu"></i>
+            <ul>
+            <li><a  href="index.html" >Home</a></li>
+            <li><a href="gallerie.html">Galerie</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="reservation.html" class="active">Reservation</a></li>
+        </ul>
+        <div class="form">
+            <i class="fas fa-search"></i>
+        </div>
+    </nav>
+    </div>
+</header>
+<!-- End Header -->
+    <!-- Start Reservation -->
+  
+      <section class="reserve">
+
+            <div class="container">
+                <div class="main-heading">
+                    <h2>Reserve Now</h2>
+                    <p>
+                      Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget
+                      tincidunt.
+                    </p>
+                  </div>
+            
+        <div class="inner-reserve container">
+          <form action="">
+            <h3>Select Type Of Vehicle</h3>
+            <select name="Type" id="type" onchange="clearList(),getType()">
+              <option>Select Type</option>
+              <option>Moto</option>
+              <option>Citadine</option>
+              <option>Compact</option>
+              <option>Berline</option>
+              <option>Utilitaire</option>
+              <option>Engin de Chantier</option>
+              <option>Camion</option>
+            </select>
+          </form>
+          <h3>Transmission</h3>
+          <div class="transmission">
+            <input type="radio" id="manual" name="transmission" value="manual" />
+            <label for="manual">Manual</label>
+            <input type="radio" id="auto" name="transmission" value="auto" />
+            <label for="auto">Automatique</label>
+          </div>
+          <h3>Fuel</h3>
+          <div class="boit">
+            <input type="radio" id="elect" name="boit" value="0.05" />
+            <label for="elect">Electrique</label>
+            <input type="radio" id="hybride" name="boit" value="0.09" />
+            <label for="hybride">Hybride</label>
+            <input type="radio" id="essence" name="boit" value="0.14" />
+            <label for="essence">Essence</label>
+            <input type="radio" id="diesel" name="boit" value="0.21" />
+            <label for="diesel">Diesel</label>
+          </div>
+          <h3>Total Days</h3>
+          <input type="number" id="days" name="days" placeholder="Type Days.." />
+          <button onclick="calcPrice()">Submit</button>
+          <div class="total">
+            <h3>Total : <span id="totalPrice">0.0</span>$</h3>
+          </div>
+        </div>
+      </section>
+      <!-- End Reservation -->
+      <script src="js/main.js"></script>
+         <!-- Start Footer -->
+         <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>company</h4>
+                        <ul>
+                            <li><a href="#">about us</a></li>
+                            <li><a href="#">our services</a></li>
+                            <li><a href="#">privacy policy</a></li>
+                            <li><a href="#">affiliate program</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>get help</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">shipping</a></li>
+                            <li><a href="#">returns</a></li>
+                            <li><a href="#">order status</a></li>
+                            <li><a href="#">payment options</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>online</h4>
+                    
+                        <ul>
+                            <li><a  href="index.html">Home</a></li>
+                            <li><a href="gallerie.html">Galerie</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="reservation.html">Reservation</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>follow us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </footer>
+          <!-- End Footer -->
+      <script src="js/main.js">
+     
+        var navbar = document.querySelector(".ham_menu");
+        var ham = document.querySelector(".ham");
+  
+        ham.addEventListener("click", toggleHamburger);
+  
+        function toggleHamburger() {
+          navbar.classList.toggle("showNav");
+          ham.classList.toggle("showClose");
+        }
+      </script>
+</body>
+</html>
